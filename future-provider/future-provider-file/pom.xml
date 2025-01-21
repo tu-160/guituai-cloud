@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>future-provider</artifactId>
+        <groupId>com.future</groupId>
+        <version>4.0.0-RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>future-provider-file</artifactId>
+    <description>由于文件服务的上传下载是内部自己调用的，无需使用token，因此采用Dubbo RPC调用</description>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-common-dubbo</artifactId>
+        </dependency>
+        <!--模型-->
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-file-model</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!--MultipartFile-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-storage-core-starter</artifactId>
+        </dependency>
+    </dependencies>
+
+
+</project>

@@ -1,0 +1,123 @@
+# Spring
+spring:
+  application:
+    # 应用名称
+    name: future-gateway
+  mvc:
+    servlet:
+      load-on-startup: 0
+  cloud:
+    nacos:
+      username: @nacos.username@
+      password: @nacos.password@
+      discovery:
+        # 服务注册地址
+        server-addr: @nacos.server@
+        group: @nacos.discovery.group@
+        namespace: @nacos.namespace@
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        file-extension: yaml
+        group: @nacos.config.group@
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        extension-configs:
+          - # 数据源及Redis配置
+            data-id: datasource.yaml
+            group: DEFAULT_GROUP
+            refresh: true
+          - # 静态资源配置
+            data-id: resources.yaml
+            group: DEFAULT_GROUP
+            refresh: true
+          - # 网关路由配置
+            data-id: router.yaml
+            group: DEFAULT_GROUP
+            refresh: true
+          - # 系统配置
+            data-id: system-config.yaml
+            group: DEFAULT_GROUP
+            refresh: true
+          - # 日志配置
+            data-id: logger.yaml
+            group: DEFAULT_GROUP
+            refresh: true
+
+    sentinel:
+      # 取消控制台懒加载
+      eager: true
+      transport:
+        dashboard: @sentinel.dashboard@
+      log:
+        dir: log/${spring.application.name}/sentinel
+#      # 限流
+#      datasource:
+#        sentinel-flow:
+#          nacos:
+#            server-addr: 127.0.0.1:30099
+#            data-id: sentinel-ruleflow-service
+#            namespace: 1e017954-eb52-4d21-a843-0286d9013cf3
+#            groupId: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: flow
+#        # 熔断
+#        sentinel-degrade:
+#          nacos:
+#            server-addr: 127.0.0.1:30099
+#            data-id: sentinel-degrade-service
+#            namespace: 1e017954-eb52-4d21-a843-0286d9013cf3
+#            groupId: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: degrade
+#        # 系统自适应保护
+#        sentinel-system:
+#          nacos:
+#            server-addr: 127.0.0.1:30099
+#            data-id: sentinel-system-service
+#            namespace: 1e017954-eb52-4d21-a843-0286d9013cf3
+#            groupId: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: system
+#        # 来源访问控制
+#        sentinel-authority:
+#          nacos:
+#            server-addr: 127.0.0.1:30099
+#            data-id: sentinel-authority-service
+#            namespace: 1e017954-eb52-4d21-a843-0286d9013cf3
+#            groupId: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: authority
+#        # 热点参数规则
+#        sentinel-paramflow:
+#          nacos:
+#            server-addr: 127.0.0.1:30099
+#            data-id: sentinel-paramflow-service
+#            namespace: 1e017954-eb52-4d21-a843-0286d9013cf3
+#            groupId: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: paramflow
+    gateway:
+      discovery:
+        locator:
+          lowerCaseServiceId: true
+          enabled: true
+
+# 全局参数设置
+ribbon:
+  eager-load:
+    enabled: true
+    clients: future-oauth
+  ReadTimeout: 120000
+  ConnectTimeout: 10000
+  SocketTimeout: 10000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+
+
+knife4j:
+  # 聚合swagger文档
+  gateway:
+    enabled: true
+    # 指定手动配置的模式(默认为该模式)
+    strategy: DISCOVER # manual
+
+

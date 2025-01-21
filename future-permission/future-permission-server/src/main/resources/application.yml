@@ -1,0 +1,24 @@
+# 应用服务器
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 30010
+
+# Spring
+spring:
+  profiles:
+    active: @profiles.active@
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    # 开启在线日志查看功能
+    logfile:
+      enabled: true

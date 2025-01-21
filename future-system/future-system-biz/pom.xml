@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>future-system</artifactId>
+        <groupId>com.future</groupId>
+        <version>4.0.0-RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>future-system-biz</artifactId>
+    <dependencies>
+        <!-- data模块 -->
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-common-database</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-system-entity</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- 缩略图 -->
+        <dependency>
+            <groupId>net.coobird</groupId>
+            <artifactId>thumbnailator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-file-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-provider-file</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-common-sms</artifactId>
+        </dependency>
+
+        <!-- 钉钉API的Jar -->
+        <!-- <dependency>
+            <groupId>dingtalk-sdk-java</groupId>
+            <artifactId>taobao-sdk-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>dingtalk-sdk-java</groupId>
+            <artifactId>taobao-sdk-java-source</artifactId>
+        </dependency> -->
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-permission-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-app-api</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- 查询内存、cpu start -->
+        <dependency>
+            <groupId>com.github.oshi</groupId>
+            <artifactId>oshi-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna-platform</artifactId>
+        </dependency>
+        <!--查询内存、cpu end-->
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-oauth-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-scheduletask-api</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-message-api</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-visualdev-portal-api</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+    </dependencies>
+
+
+</project>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>future-permission</artifactId>
+        <groupId>com.future</groupId>
+        <version>4.0.0-RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>future-permission-biz</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-permission-entity</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-system-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-file-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-common-office</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-common-file</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-oauth-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-common-connector</artifactId>
+        </dependency>
+        <!-- data模块 -->
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-common-database</artifactId>
+        </dependency>
+        <!-- 第三方登录-->
+        <dependency>
+            <groupId>me.zhyd.oauth</groupId>
+            <artifactId>JustAuth</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-message-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-system-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.future</groupId>
+            <artifactId>future-visualdev-portal-entity</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+
+</project>
