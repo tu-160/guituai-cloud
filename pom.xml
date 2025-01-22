@@ -59,6 +59,10 @@
                 <sentinel.dashboard>127.0.0.0:30098</sentinel.dashboard>
                 <ai.server.host>http://127.0.0.1:9380</ai.server.host>
             </properties>
+            <activation>
+                <!-- 默认环境 -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
         </profile>
         <profile>
             <id>dev</id>
@@ -75,10 +79,6 @@
                 <sentinel.dashboard>172.20.200.33:30098</sentinel.dashboard>
                 <ai.server.host>http://172.20.200.199:9380</ai.server.host>
             </properties>
-            <activation>
-                <!-- 默认环境 -->
-                <activeByDefault>true</activeByDefault>
-            </activation>
         </profile>
         <profile>
             <id>prod</id>
